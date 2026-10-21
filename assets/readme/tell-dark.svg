@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img">
+<defs>
+  <radialGradient id="bg" cx="30%" cy="45%" r="85%">
+    <stop offset="0" stop-color="#0b1424"/><stop offset="1" stop-color="#04060c"/>
+  </radialGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/>
+  </linearGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="#7dd3fc" stroke-opacity="0.05"/>
+  </pattern>
+  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<style>
+.line { stroke-dasharray: 1199; stroke-dashoffset: 1199; animation: draw 9s ease-in-out infinite; }
+@keyframes draw { 0% { stroke-dashoffset: 1199; } 55%, 92% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+.mark { opacity: 0; animation: mark 9s ease-out infinite; }
+@keyframes mark { 0%, 34% { opacity: 0; } 40%, 92% { opacity: 1; } 100% { opacity: 0; } }
+.news { opacity: 0; animation: news 9s ease-out infinite; }
+@keyframes news { 0%, 52% { opacity: 0; } 58%, 92% { opacity: 1; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .line { stroke-dashoffset: 0; } .mark, .news { opacity: 1; } } @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }</style>
+<rect width="1200" height="330" rx="18" fill="url(#bg)"/>
+<rect width="1200" height="330" rx="18" fill="url(#grid)"/>
+
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="2" fill="#7b8aa3">
+  <text x="80" y="44">A LONGSHOT, AS THE MARKET SAW IT</text>
+  <text x="1120" y="56" text-anchor="end">100¢</text>
+  <text x="1120" y="276" text-anchor="end">4¢</text>
+</g>
+<path d="M80 250H1120" stroke="#7b8aa3" stroke-opacity=".25" stroke-dasharray="2 6"/>
+<path d="M80 70H1120" stroke="#7b8aa3" stroke-opacity=".15" stroke-dasharray="2 6"/>
+<path class="line" d="M80 242.1 L94 239.6 L108 241.0 L122 239.2 L136 239.0 L150 243.5 L164 243.9 L178 237.3 L192 241.9 L206 242.1 L220 236.0 L234 240.2 L248 237.3 L262 240.2 L276 238.9 L290 242.8 L304 238.9 L318 237.1 L332 239.8 L346 238.1 L360 238.6 L374 243.5 L388 237.9 L402 239.3 L416 241.6 L430 243.8 L444 237.1 L458 240.2 L472 238.2 L486 237.0 L500 238.3 L514 236.6 L528 240.8 L542 237.6 L556 240.4 L570 236.5 L584 237.0 L598 243.2 L612 242.9 L626 242.3 L640 236.3 L654 240.5 L668 239.0 L682 241.6 L696 239.9 L710 240.9 L724 241.2 L738 239.3 L752 239.3 L766 236.8 L780 238.5 L794 236.6 L808 237.1 L822 236.1 L836 238.6 L850 242.7 L864 237.1 L878 236.3 L892 236.8 L906 239.4 L920 238.3 L936 210.0 L944 110.0 L952 76.0 L1120 70.0" fill="none" stroke="url(#accent)" stroke-width="3" stroke-linejoin="round" filter="url(#glow)"/>
+<g class="mark">
+  <line x1="700" y1="240.9" x2="700" y2="100" stroke="#ff3d8b" stroke-opacity=".6" stroke-dasharray="3 4"/>
+  <circle cx="700" cy="240.9" r="7" fill="#ff3d8b" filter="url(#glow)"/>
+  <text x="700" y="88" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="17" fill="#e6f1ff">someone bought — big</text>
+</g>
+<g class="news">
+  <text x="916" y="170" text-anchor="end" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="17" fill="#e6f1ff" fill-opacity=".8">then the news broke</text>
+</g>
+
+</svg>

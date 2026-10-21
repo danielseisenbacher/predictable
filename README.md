@@ -1,41 +1,41 @@
-# predictable
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/hero-dark.svg">
+    <img alt="PREDICTABLE: the bets that were predictable, for someone" src="assets/readme/hero-light.svg" width="100%">
+  </picture>
+</p>
 
-Finds Polymarket wallets that look like they trade on inside information. It looks for:
+<p align="center">
+  <a href="https://danielseisenbacher.github.io/predictable/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/readme/button-dark.svg">
+      <img alt="Open the dashboard" src="assets/readme/button-light.svg" height="72">
+    </picture>
+  </a>
+</p>
 
-- new accounts betting big on longshots
-- accounts with statistically improbable win rates
-- leaderboard newcomers
-- linked accounts
-- well-timed bets
+<br>
 
-It then tracks the flagged wallets' trades every ~8 minutes.
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/tell-dark.svg">
+    <img alt="A longshot trades at 4¢. Someone buys big. Then the news breaks and it jumps to 100¢." src="assets/readme/tell-light.svg" width="100%">
+  </picture>
+</p>
 
-**Where to look**
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/trio-dark.svg">
+    <img alt="Find every trade. Score with nine signals. Follow every move, every 8 minutes." src="assets/readme/trio-light.svg" width="100%">
+  </picture>
+</p>
 
-- Dashboard: https://danielseisenbacher.github.io/predictable/
-- Android app: [`predictable.apk`](https://github.com/danielseisenbacher/predictable/releases/latest/download/predictable.apk) — the dashboard for phones, plus the GitHub Actions runs (run/cancel/re-run with an optional token in Settings)
-- Notifications: issues labelled [`insider-candidate`](https://github.com/danielseisenbacher/predictable/issues?q=label%3Ainsider-candidate). Each flagged wallet gets one issue, and new findings and big trades are added as comments on it.
+<p align="center">
+  <a href="https://danielseisenbacher.github.io/predictable/"><b>Dashboard</b></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/danielseisenbacher/predictable/releases/latest/download/predictable.apk"><b>Android app</b></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/danielseisenbacher/predictable/issues?q=label%3Ainsider-candidate"><b>Live alerts</b></a>
+</p>
 
-**How it runs** (GitHub Actions, one static Rust binary, public APIs only, no keys)
-
-| Workflow | When | Does |
-|---|---|---|
-| `discover.yml` | every 4 h | scores new wallets, opens and updates issues, writes the `data` branch |
-| `track.yml` | every 8 min | polls watched wallets for new trades |
-| `pages.yml` | on `site/` changes | deploys the dashboard (it reads its data from the `data` branch) |
-| `maintenance.yml` | weekly | prunes stale wallets, squashes the `data` branch |
-| `build.yml` | on code changes | tests, then publishes the binary to release `bin-latest` |
-| `android.yml` | on `android/` changes | tests, then publishes the signed APK to release `apk-latest` |
-
-**Layout:** `crates/` holds the Rust workspace (`cli` is the `predictable` binary), `site/` the
-static dashboard, `android/` the Android app (Kotlin, Jetpack Compose), `fixtures/` the recorded API responses for tests, and `scripts/ci/` the
-workflow helpers.
-
-**Run locally:** `cargo run -p predictable -- discover --dry-run --data-dir /tmp/pw`
-
-**Config:** `predictable.toml`. Defaults are in `crates/types/src/config.rs`.
-
-These are heuristic leads, not proof. The signals also catch lucky, skilled or
-contrarian traders.
-
-Formerly `poly_position_scraper`, a Python pipeline, rewritten in Rust in October 2026.
+<p align="center"><sub>Heuristic leads, not proof. Most unusual bets have innocent explanations.</sub></p>
