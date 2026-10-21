@@ -1,7 +1,7 @@
 // Data source resolution, fetching, shared state and shared HTML fragments.
 import { esc, shortAddr, sigInfo } from "./util.js";
 
-const FALLBACK = { owner: "danielseisenbacher", repo: "poly_position_scraper" };
+const FALLBACK = { owner: "danielseisenbacher", repo: "predictable" };
 
 function resolveConfig() {
   let owner = FALLBACK.owner;

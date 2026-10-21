@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -31,11 +31,11 @@ import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import io.github.danielseisenbacher.polywatch.data.CandidateRow
-import io.github.danielseisenbacher.polywatch.data.Position
-import io.github.danielseisenbacher.polywatch.ui.theme.Mono
-import io.github.danielseisenbacher.polywatch.ui.theme.NumStyle
-import io.github.danielseisenbacher.polywatch.ui.theme.Pw
+import io.github.danielseisenbacher.predictable.data.CandidateRow
+import io.github.danielseisenbacher.predictable.data.Position
+import io.github.danielseisenbacher.predictable.ui.theme.Mono
+import io.github.danielseisenbacher.predictable.ui.theme.NumStyle
+import io.github.danielseisenbacher.predictable.ui.theme.Pw
 
 @Composable
 fun CandidateCard(r: CandidateRow, isNew: Boolean, onIssue: (Long) -> Unit) {

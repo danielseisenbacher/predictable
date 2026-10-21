@@ -1,11 +1,11 @@
-package io.github.danielseisenbacher.polywatch.data
+package io.github.danielseisenbacher.predictable.data
 
 import android.content.Context
 import androidx.core.content.edit
 
 /** App preferences. Private to the app and excluded from backups (see data_extraction_rules.xml). */
 class Settings(context: Context) {
-    private val p = context.getSharedPreferences("polywatch", Context.MODE_PRIVATE)
+    private val p = context.getSharedPreferences("predictable", Context.MODE_PRIVATE)
 
     var owner: String
         get() = p.getString("owner", null)?.takeIf { it.isNotBlank() } ?: DEFAULT_OWNER
@@ -49,6 +49,6 @@ class Settings(context: Context) {
 
     companion object {
         const val DEFAULT_OWNER = "danielseisenbacher"
-        const val DEFAULT_REPO = "poly_position_scraper"
+        const val DEFAULT_REPO = "predictable"
     }
 }

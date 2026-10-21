@@ -2,7 +2,7 @@
 source: crates/alerts/src/tests.rs
 expression: body
 ---
-**[0xf323…b0d7](https://polymarket.com/profile/0xf3238cc8d3ef945c39b36712040886e3847eb0d7)** · [dashboard](https://danielseisenbacher.github.io/poly_position_scraper/#w/0xf3238cc8d3ef945c39b36712040886e3847eb0d7) · [polygonscan](https://polygonscan.com/address/0xf3238cc8d3ef945c39b36712040886e3847eb0d7)
+**[0xf323…b0d7](https://polymarket.com/profile/0xf3238cc8d3ef945c39b36712040886e3847eb0d7)** · [dashboard](https://danielseisenbacher.github.io/predictable/#w/0xf3238cc8d3ef945c39b36712040886e3847eb0d7) · [polygonscan](https://polygonscan.com/address/0xf3238cc8d3ef945c39b36712040886e3847eb0d7)
 
 **score 78** (high) · `@quiet|whale` / `Glossy-Antelope` · age 412 d · value $16,060 · realized PnL +$18,734 · win rate 7/9.5 (z=3.4)
 
@@ -28,8 +28,8 @@ expression: body
 | [Minor market #4](https://polymarket.com/market/minor-4) | Yes | closed | 0.50 | 104 | 0.50 | $0 |
 | [Minor market #3](https://polymarket.com/market/minor-3) | Yes | closed | 0.50 | 103 | 0.50 | $0 |
 
-**Cluster** `c-0a1b2c3d4e`: linked accounts, see the [dashboard](https://danielseisenbacher.github.io/poly_position_scraper/#w/0xf3238cc8d3ef945c39b36712040886e3847eb0d7).
+**Cluster** `c-0a1b2c3d4e`: linked accounts, see the [dashboard](https://danielseisenbacher.github.io/predictable/#w/0xf3238cc8d3ef945c39b36712040886e3847eb0d7).
 
 _Heuristic lead, not proof of insider trading._
 
-<!-- polywatch:addr=0xf3238cc8d3ef945c39b36712040886e3847eb0d7 -->
+<!-- predictable:addr=0xf3238cc8d3ef945c39b36712040886e3847eb0d7 -->

@@ -1,13 +1,13 @@
 [package]
-name = "polywatch"
-description = "polywatch: Polymarket insider-candidate detector (discover | track | alert | compact | legacy-close)."
+name = "predictable"
+description = "predictable: Polymarket insider-candidate detector (discover | track | alert | compact | legacy-close)."
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 publish.workspace = true
 
 [[bin]]
-name = "polywatch"
+name = "predictable"
 path = "src/main.rs"
 
 [dependencies]

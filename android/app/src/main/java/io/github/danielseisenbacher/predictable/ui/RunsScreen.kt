@@ -1,5 +1,5 @@
 // GitHub Actions: the pipeline's workflow runs, their jobs, and (with a token) run/cancel/re-run.
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
@@ -81,13 +81,13 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.repeatOnLifecycle
-import io.github.danielseisenbacher.polywatch.data.AppViewModel
-import io.github.danielseisenbacher.polywatch.data.DispatchInput
-import io.github.danielseisenbacher.polywatch.data.Job
-import io.github.danielseisenbacher.polywatch.data.Workflow
-import io.github.danielseisenbacher.polywatch.data.WorkflowRun
-import io.github.danielseisenbacher.polywatch.data.isoToEpoch
-import io.github.danielseisenbacher.polywatch.ui.theme.Pw
+import io.github.danielseisenbacher.predictable.data.AppViewModel
+import io.github.danielseisenbacher.predictable.data.DispatchInput
+import io.github.danielseisenbacher.predictable.data.Job
+import io.github.danielseisenbacher.predictable.data.Workflow
+import io.github.danielseisenbacher.predictable.data.WorkflowRun
+import io.github.danielseisenbacher.predictable.data.isoToEpoch
+import io.github.danielseisenbacher.predictable.ui.theme.Pw
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

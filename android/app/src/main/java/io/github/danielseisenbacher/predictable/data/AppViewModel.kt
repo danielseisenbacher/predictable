@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.data
+package io.github.danielseisenbacher.predictable.data
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

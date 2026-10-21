@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Append a short markdown summary of a polywatch JSON report to $GITHUB_STEP_SUMMARY
+# Append a short markdown summary of a predictable JSON report to $GITHUB_STEP_SUMMARY
 # (or stdout when that is unset).
 #   summary.sh discover|track <report.json> [dry-run true|false]
 set -euo pipefail

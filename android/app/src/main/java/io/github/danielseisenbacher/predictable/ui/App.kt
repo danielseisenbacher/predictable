@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -53,8 +53,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import io.github.danielseisenbacher.polywatch.data.AppViewModel
-import io.github.danielseisenbacher.polywatch.data.nowS
+import io.github.danielseisenbacher.predictable.data.AppViewModel
+import io.github.danielseisenbacher.predictable.data.nowS
 import kotlinx.coroutines.delay
 
 /** Wall clock in unix seconds, ticking every 30 s so "x min ago" labels stay current. */

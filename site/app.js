@@ -1,4 +1,4 @@
-// polywatch dashboard — entry point: header, overview, tape, routing, drawer.
+// predictable dashboard — entry point: header, overview, tape, routing, drawer.
 // No build step, no dependencies. Data contracts: crates/types/src/site.rs.
 import { esc, usd, num, rel, relShort, date, frac, pnlClass, sigInfo, SIGNALS, store, cmp, debounce, nowS, kindBadge, price, KIND } from "./js/util.js";
 import { cfg, state, loadCore, walletCell, scoreCell, sigChips, clusterBadge, issueLink, errorBox, loading, scanTxUrl } from "./js/data.js";
@@ -383,9 +383,9 @@ function route() {
   hideTip();
   setNav(v === "tape" ? "tape" : v === "" ? "" : "x");
   if (v !== "") closeDrawer();
-  document.title = "polywatch";
+  document.title = "predictable";
   if (v === "w") {
-    document.title = `polywatch · ${id.slice(0, 10)}`;
+    document.title = `predictable · ${id.slice(0, 10)}`;
     renderWallet(view, id);
   } else if (v === "m") renderMarket(view, id);
   else if (v === "c") renderCluster(view, id);

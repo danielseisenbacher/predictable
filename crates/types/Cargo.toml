@@ -1,6 +1,6 @@
 [package]
 name = "types"
-description = "Shared domain model, API row types, config and dashboard schemas for polywatch. No I/O."
+description = "Shared domain model, API row types, config and dashboard schemas for predictable. No I/O."
 version.workspace = true
 edition.workspace = true
 license.workspace = true

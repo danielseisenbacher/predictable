@@ -19,11 +19,11 @@ fun signingValue(env: String, prop: String): String? =
 val storePath = signingValue("ANDROID_KEYSTORE_PATH", "storeFile")
 
 android {
-    namespace = "io.github.danielseisenbacher.polywatch"
+    namespace = "io.github.danielseisenbacher.predictable"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "io.github.danielseisenbacher.polywatch"
+        applicationId = "io.github.danielseisenbacher.predictable"
         minSdk = 26
         targetSdk = 35
         versionCode = System.getenv("VERSION_CODE")?.toIntOrNull() ?: 1

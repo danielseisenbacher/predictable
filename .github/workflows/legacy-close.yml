@@ -45,7 +45,7 @@ jobs:
           persist-credentials: false
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            polywatch.toml
+            predictable.toml
             scripts/ci/
 
       - name: Download binary
@@ -56,5 +56,5 @@ jobs:
           set -euo pipefail
           args=(legacy-close --old-label "$OLD_LABEL")
           if [[ "$DRY_RUN" == "true" ]]; then args+=(--dry-run); fi
-          bin/polywatch "${args[@]}" | tee legacy-close.log
+          bin/predictable "${args[@]}" | tee legacy-close.log
           echo "### legacy-close$([[ "$DRY_RUN" == "true" ]] && echo ' (dry run)'): $(tail -n1 legacy-close.log)" >> "$GITHUB_STEP_SUMMARY"

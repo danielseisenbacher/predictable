@@ -10,7 +10,7 @@
 //! - [`legacy_close`]: one-shot, closes every open issue carrying `old_label` and adds
 //!   `cfg.alerts.label_legacy`.
 //!
-//! Issue body ends with the marker `<!-- polywatch:addr=0x… -->`; if `alerts.json` is
+//! Issue body ends with the marker `<!-- predictable:addr=0x… -->`; if `alerts.json` is
 //! missing, existing issues are found by searching for it.
 
 use std::time::{Duration, Instant};

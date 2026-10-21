@@ -18,7 +18,7 @@ set -euo pipefail
 repo="${GITHUB_REPOSITORY:?GITHUB_REPOSITORY is not set}"
 tag=state-latest
 tmp="${RUNNER_TEMP:-/tmp}"
-manifest="$tmp/polywatch-state.sha256"
+manifest="$tmp/predictable-state.sha256"
 touch "$manifest"
 
 # Names of the assets currently on the release (empty if the release is missing).
@@ -86,7 +86,7 @@ case "$cmd" in
       exit 0
     fi
     if [[ -z "$assets" ]] && ! gh release view "$tag" -R "$repo" > /dev/null 2>&1; then
-      gh release create "$tag" -R "$repo" --prerelease --title "polywatch state" \
+      gh release create "$tag" -R "$repo" --prerelease --title "predictable state" \
         --notes "Large state written by discover.yml and track.yml (not for humans). Do not delete."
     fi
     gh release upload "$tag" -R "$repo" --clobber "${files[@]}"

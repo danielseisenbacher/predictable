@@ -1,4 +1,4 @@
-//! Persistence for polywatch.
+//! Persistence for predictable.
 //!
 //! - [`DataDir`]: the checked-out orphan `data` branch (JSON files, atomic writes).
 //! - [`bin`]: compact encodings of the large release-asset state (`evaluated.bin`,

@@ -29,7 +29,7 @@ pub(crate) fn http_client() -> reqwest::Client {
         "X-GitHub-Api-Version",
         HeaderValue::from_static("2022-11-28"),
     );
-    headers.insert(USER_AGENT, HeaderValue::from_static("polywatch"));
+    headers.insert(USER_AGENT, HeaderValue::from_static("predictable"));
     reqwest::Client::builder()
         .default_headers(headers)
         .timeout(Duration::from_secs(30))

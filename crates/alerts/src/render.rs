@@ -8,10 +8,10 @@ use types::{Addr, Config, Position, Signal, SignalKind, Tier, TradeEvent, TradeK
 /// signal kinds" for rescore comments.
 pub const SIG_LABEL_MIN: f64 = 0.3;
 /// Start of the hidden marker every issue body ends with.
-pub const MARKER_PREFIX: &str = "<!-- polywatch:addr=";
+pub const MARKER_PREFIX: &str = "<!-- predictable:addr=";
 const TOP_POSITIONS: usize = 10;
 
-/// `<!-- polywatch:addr=0x… -->`.
+/// `<!-- predictable:addr=0x… -->`.
 pub fn marker(addr: &Addr) -> String {
     format!("{MARKER_PREFIX}{addr} -->")
 }

@@ -17,31 +17,31 @@ pub(crate) fn label_specs(cfg: &Config) -> Vec<(String, &'static str, String)> {
         (
             a.label_candidate.clone(),
             "d93f0b",
-            "polywatch: possible insider-trading wallet".into(),
+            "predictable: possible insider-trading wallet".into(),
         ),
         (
             "tier:high".into(),
             "b60205",
-            format!("polywatch: score ≥ {}", cfg.signals.tier_high),
+            format!("predictable: score ≥ {}", cfg.signals.tier_high),
         ),
         (
             "tier:medium".into(),
             "fbca04",
-            format!("polywatch: score ≥ {}", cfg.signals.tier_medium),
+            format!("predictable: score ≥ {}", cfg.signals.tier_medium),
         ),
     ];
     for k in SignalKind::ALL {
-        v.push((sig_label(k), "c5def5", format!("polywatch signal: {k}")));
+        v.push((sig_label(k), "c5def5", format!("predictable signal: {k}")));
     }
     v.push((
         "cluster".into(),
         "5319e7",
-        "polywatch: wallet linked to other accounts".into(),
+        "predictable: wallet linked to other accounts".into(),
     ));
     v.push((
         a.label_resolved.clone(),
         "0e8a16",
-        "polywatch: wallet left the watchlist".into(),
+        "predictable: wallet left the watchlist".into(),
     ));
     v
 }
@@ -319,7 +319,7 @@ pub(crate) async fn sync_state(
         if !dry {
             gh.comment(
                 issue,
-                "Dropped off the watchlist; closing. polywatch no longer tracks this wallet.",
+                "Dropped off the watchlist; closing. predictable no longer tracks this wallet.",
             )
             .await
             .with_context(|| format!("commenting on issue #{issue} for {addr}"))?;
@@ -425,7 +425,7 @@ pub(crate) async fn legacy_close(
     if dry_run || issues.is_empty() {
         return Ok(issues.len());
     }
-    gh.ensure_label(legacy, "cccccc", "Issue from the pre-polywatch scraper")
+    gh.ensure_label(legacy, "cccccc", "Issue from the pre-predictable scraper")
         .await?;
     let mut closed = 0;
     for i in &issues {

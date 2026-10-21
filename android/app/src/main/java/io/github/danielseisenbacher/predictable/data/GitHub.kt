@@ -1,5 +1,5 @@
 // GitHub Actions REST API: workflow runs, jobs, and (with a token) dispatch/cancel/re-run.
-package io.github.danielseisenbacher.polywatch.data
+package io.github.danielseisenbacher.predictable.data
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

@@ -1,5 +1,5 @@
 // Market (`market/<condition_id>`) and cluster (`cluster/<id>`) screens.
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,13 +31,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import io.github.danielseisenbacher.polywatch.data.AppViewModel
-import io.github.danielseisenbacher.polywatch.data.CoreFile
-import io.github.danielseisenbacher.polywatch.ui.charts.ClusterGraph
-import io.github.danielseisenbacher.polywatch.ui.charts.EntryPlot
-import io.github.danielseisenbacher.polywatch.ui.theme.Mono
-import io.github.danielseisenbacher.polywatch.ui.theme.NumStyle
-import io.github.danielseisenbacher.polywatch.ui.theme.Pw
+import io.github.danielseisenbacher.predictable.data.AppViewModel
+import io.github.danielseisenbacher.predictable.data.CoreFile
+import io.github.danielseisenbacher.predictable.ui.charts.ClusterGraph
+import io.github.danielseisenbacher.predictable.ui.charts.EntryPlot
+import io.github.danielseisenbacher.predictable.ui.theme.Mono
+import io.github.danielseisenbacher.predictable.ui.theme.NumStyle
+import io.github.danielseisenbacher.predictable.ui.theme.Pw
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable

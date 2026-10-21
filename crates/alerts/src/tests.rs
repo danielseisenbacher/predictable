@@ -397,7 +397,7 @@ fn render_issue_snapshot() {
     insta::assert_snapshot!("issue_title", title);
     insta::assert_snapshot!("issue_body", body);
     insta::assert_json_snapshot!("issue_labels", labels);
-    assert!(body.ends_with("<!-- polywatch:addr=0xf3238cc8d3ef945c39b36712040886e3847eb0d7 -->"));
+    assert!(body.ends_with("<!-- predictable:addr=0xf3238cc8d3ef945c39b36712040886e3847eb0d7 -->"));
     assert_eq!(parse_marker(&body), Some(wallet().addr));
     // Only the top ten positions are listed.
     assert_eq!(body.matches("](https://polymarket.com/market/").count(), 10);

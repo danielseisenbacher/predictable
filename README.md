@@ -1,4 +1,4 @@
-# polywatch
+# predictable
 
 Finds Polymarket wallets that look like they trade on inside information. It looks for:
 
@@ -12,9 +12,9 @@ It then tracks the flagged wallets' trades every ~8 minutes.
 
 **Where to look**
 
-- Dashboard: https://danielseisenbacher.github.io/poly_position_scraper/
-- Android app: [`polywatch.apk`](https://github.com/danielseisenbacher/poly_position_scraper/releases/latest/download/polywatch.apk) — the dashboard for phones, plus the GitHub Actions runs (run/cancel/re-run with an optional token in Settings)
-- Notifications: issues labelled [`insider-candidate`](https://github.com/danielseisenbacher/poly_position_scraper/issues?q=label%3Ainsider-candidate). Each flagged wallet gets one issue, and new findings and big trades are added as comments on it.
+- Dashboard: https://danielseisenbacher.github.io/predictable/
+- Android app: [`predictable.apk`](https://github.com/danielseisenbacher/predictable/releases/latest/download/predictable.apk) — the dashboard for phones, plus the GitHub Actions runs (run/cancel/re-run with an optional token in Settings)
+- Notifications: issues labelled [`insider-candidate`](https://github.com/danielseisenbacher/predictable/issues?q=label%3Ainsider-candidate). Each flagged wallet gets one issue, and new findings and big trades are added as comments on it.
 
 **How it runs** (GitHub Actions, one static Rust binary, public APIs only, no keys)
 
@@ -27,15 +27,15 @@ It then tracks the flagged wallets' trades every ~8 minutes.
 | `build.yml` | on code changes | tests, then publishes the binary to release `bin-latest` |
 | `android.yml` | on `android/` changes | tests, then publishes the signed APK to release `apk-latest` |
 
-**Layout:** `crates/` holds the Rust workspace (`cli` is the `polywatch` binary), `site/` the
+**Layout:** `crates/` holds the Rust workspace (`cli` is the `predictable` binary), `site/` the
 static dashboard, `android/` the Android app (Kotlin, Jetpack Compose), `fixtures/` the recorded API responses for tests, and `scripts/ci/` the
 workflow helpers.
 
-**Run locally:** `cargo run -p polywatch -- discover --dry-run --data-dir /tmp/pw`
+**Run locally:** `cargo run -p predictable -- discover --dry-run --data-dir /tmp/pw`
 
-**Config:** `polywatch.toml`. Defaults are in `crates/types/src/config.rs`.
+**Config:** `predictable.toml`. Defaults are in `crates/types/src/config.rs`.
 
 These are heuristic leads, not proof. The signals also catch lucky, skilled or
 contrarian traders.
 
-Migrating from the old Python pipeline: see [MIGRATION.md](MIGRATION.md).
+Formerly `poly_position_scraper`, a Python pipeline, rewritten in Rust in October 2026.

@@ -45,7 +45,7 @@ jobs:
           persist-credentials: false
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            polywatch.toml
+            predictable.toml
             scripts/ci/
 
       # Exits 0 with exists=false before the first discovery has created `data`.
@@ -72,7 +72,7 @@ jobs:
           set -euo pipefail
           args=(track --data-dir data --state-dir state --report track.report.json)
           if [[ "$DRY_RUN" == "true" ]]; then args+=(--dry-run); fi
-          bin/polywatch "${args[@]}"
+          bin/predictable "${args[@]}"
 
       - name: Commit data
         if: steps.data.outputs.exists == 'true' && env.DRY_RUN != 'true'

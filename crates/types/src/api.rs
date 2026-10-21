@@ -421,7 +421,7 @@ pub enum ApiError {
 
 pub type ApiResult<T> = Result<T, ApiError>;
 
-/// Everything polywatch reads from the outside world. Implemented by `api::Client`;
+/// Everything predictable reads from the outside world. Implemented by `api::Client`;
 /// discovery and tracker take `&dyn PolyApi` so tests can pass a mock.
 ///
 /// Implementations handle rate limiting, retries (429 `Retry-After`, 503, transport

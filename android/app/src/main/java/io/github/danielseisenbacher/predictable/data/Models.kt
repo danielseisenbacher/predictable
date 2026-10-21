@@ -1,7 +1,7 @@
 // JSON shapes published on the `data` branch. Mirrors crates/types/src/site.rs and
 // crates/types/src/domain.rs; every field has a default so a schema change never
 // breaks parsing of the rest.
-package io.github.danielseisenbacher.polywatch.data
+package io.github.danielseisenbacher.predictable.data
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

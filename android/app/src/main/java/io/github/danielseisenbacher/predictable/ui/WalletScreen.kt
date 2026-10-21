@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -53,13 +53,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import io.github.danielseisenbacher.polywatch.data.AppViewModel
-import io.github.danielseisenbacher.polywatch.data.FetchError
-import io.github.danielseisenbacher.polywatch.data.Position
-import io.github.danielseisenbacher.polywatch.data.Wallet
-import io.github.danielseisenbacher.polywatch.ui.charts.Timeline
-import io.github.danielseisenbacher.polywatch.ui.theme.Mono
-import io.github.danielseisenbacher.polywatch.ui.theme.Pw
+import io.github.danielseisenbacher.predictable.data.AppViewModel
+import io.github.danielseisenbacher.predictable.data.FetchError
+import io.github.danielseisenbacher.predictable.data.Position
+import io.github.danielseisenbacher.predictable.data.Wallet
+import io.github.danielseisenbacher.predictable.ui.charts.Timeline
+import io.github.danielseisenbacher.predictable.ui.theme.Mono
+import io.github.danielseisenbacher.predictable.ui.theme.Pw
 import kotlinx.coroutines.CancellationException
 
 private class PosSort(val key: String, val label: String, val numeric: Boolean, val v: (Position) -> Comparable<*>?)
@@ -222,7 +222,7 @@ fun WalletScreen(vm: AppViewModel, addrIn: String, onBack: () -> Unit) {
                             SignalChip(s.kind)
                             Spacer(Modifier.width(8.dp))
                             Text(i.label, Modifier.weight(1f), style = MaterialTheme.typography.titleSmall)
-                            Text(fixed(s.strength, 2), style = MaterialTheme.typography.titleSmall.merge(io.github.danielseisenbacher.polywatch.ui.theme.NumStyle))
+                            Text(fixed(s.strength, 2), style = MaterialTheme.typography.titleSmall.merge(io.github.danielseisenbacher.predictable.ui.theme.NumStyle))
                         }
                         Box(Modifier.padding(vertical = 8.dp).fillMaxWidth().height(6.dp).clip(RoundedCornerShape(3.dp)).background(MaterialTheme.colorScheme.surfaceVariant)) {
                             Box(Modifier.fillMaxWidth(s.strength.toFloat().coerceIn(0f, 1f)).height(6.dp).clip(RoundedCornerShape(3.dp)).background(Pw.colors.sig(i.c)))

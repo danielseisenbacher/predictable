@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.data
+package io.github.danielseisenbacher.predictable.data
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -20,7 +20,7 @@ class HttpResponse(val status: Int, val body: String, val headers: Map<String, S
 
 /** Tiny blocking-IO HTTP client; plenty for a handful of JSON files. */
 object Http {
-    private const val UA = "polywatch-android"
+    private const val UA = "predictable-android"
 
     suspend fun request(
         url: String,

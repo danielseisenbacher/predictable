@@ -1068,7 +1068,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd"
 
 [[package]]
-name = "polywatch"
+name = "potential_utf"
+version = "0.1.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d83eb9bc6d8e5cf568e7a1101d60ee05e81ed50ea106026f3d18deeb046d7661"
+dependencies = [
+ "zerovec",
+]
+
+[[package]]
+name = "predictable"
 version = "0.1.0"
 dependencies = [
  "alerts",
@@ -1084,15 +1093,6 @@ dependencies = [
  "tracing-subscriber",
  "tracker",
  "types",
-]
-
-[[package]]
-name = "potential_utf"
-version = "0.1.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d83eb9bc6d8e5cf568e7a1101d60ee05e81ed50ea106026f3d18deeb046d7661"
-dependencies = [
- "zerovec",
 ]
 
 [[package]]

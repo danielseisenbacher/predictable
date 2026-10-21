@@ -1,4 +1,4 @@
-/* polywatch dashboard. Dark by default, light via prefers-color-scheme. */
+/* predictable dashboard. Dark by default, light via prefers-color-scheme. */
 :root {
   color-scheme: dark;
   --bg: #0d0d0d;

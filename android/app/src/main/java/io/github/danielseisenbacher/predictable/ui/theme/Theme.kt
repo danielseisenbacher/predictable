@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.ui.theme
+package io.github.danielseisenbacher.predictable.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -119,7 +119,7 @@ private val AppTypography = base.copy(
 val NumStyle = TextStyle(fontFeatureSettings = "tnum")
 
 @Composable
-fun PolywatchTheme(dynamicColor: Boolean = true, content: @Composable () -> Unit) {
+fun PredictableTheme(dynamicColor: Boolean = true, content: @Composable () -> Unit) {
     val dark = isSystemInDarkTheme()
     val ctx = LocalContext.current
     val scheme = when {

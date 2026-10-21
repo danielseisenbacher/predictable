@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.data
+package io.github.danielseisenbacher.predictable.data
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull

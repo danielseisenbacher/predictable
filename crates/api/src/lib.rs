@@ -24,7 +24,7 @@ use types::{Addr, MarketMeta, PosStatus, Profile};
 
 use crate::limiter::Limiter;
 
-/// Rate-limited client for every external API polywatch reads. Cheap to share by reference.
+/// Rate-limited client for every external API predictable reads. Cheap to share by reference.
 pub struct Client {
     cfg: ApiConfig,
     http: reqwest::Client,

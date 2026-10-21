@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate internally consistent sample data for the polywatch dashboard.
+"""Generate internally consistent sample data for the predictable dashboard.
 
 Throwaway generator; only its JSON outputs are used by `site/` when no data
 branch is reachable (local development). Shapes mirror the serde output of

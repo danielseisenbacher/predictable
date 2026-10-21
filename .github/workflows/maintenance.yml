@@ -34,7 +34,7 @@ jobs:
           persist-credentials: false
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            polywatch.toml
+            predictable.toml
             scripts/ci/
 
       - name: Check out data branch
@@ -49,8 +49,8 @@ jobs:
         if: steps.data.outputs.exists == 'true'
         run: |
           set -euo pipefail
-          bin/polywatch compact --data-dir data --state-dir state
-          bin/polywatch render-site --data-dir data --state-dir state
+          bin/predictable compact --data-dir data --state-dir state
+          bin/predictable render-site --data-dir data --state-dir state
 
       # Safe to force-push: every other writer of `data` is in the data-writer group.
       - name: Squash data branch

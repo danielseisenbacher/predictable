@@ -1,4 +1,4 @@
-//! `polywatch`: Polymarket insider-candidate detector.
+//! `predictable`: Polymarket insider-candidate detector.
 //!
 //! Layout on disk (what the workflows check out / download before running):
 //! - `--data-dir` (default `data/`): the orphan `data` branch.
@@ -18,9 +18,9 @@ use types::api::PolyApi;
 use types::{Addr, Config};
 
 #[derive(Parser)]
-#[command(name = "polywatch", version, about)]
+#[command(name = "predictable", version, about)]
 struct Cli {
-    #[arg(long, global = true, default_value = "polywatch.toml")]
+    #[arg(long, global = true, default_value = "predictable.toml")]
     config: PathBuf,
     #[arg(long, global = true, default_value = "data")]
     data_dir: PathBuf,

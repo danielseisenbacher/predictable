@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -42,9 +42,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import io.github.danielseisenbacher.polywatch.data.AppViewModel
-import io.github.danielseisenbacher.polywatch.data.CoreFile
-import io.github.danielseisenbacher.polywatch.ui.theme.Mono
+import io.github.danielseisenbacher.predictable.data.AppViewModel
+import io.github.danielseisenbacher.predictable.data.CoreFile
+import io.github.danielseisenbacher.predictable.ui.theme.Mono
 
 /** What the trade sheet needs to offer its actions. */
 data class TradeRef(

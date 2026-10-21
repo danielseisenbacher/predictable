@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch
+package io.github.danielseisenbacher.predictable
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,9 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import io.github.danielseisenbacher.polywatch.data.AppViewModel
-import io.github.danielseisenbacher.polywatch.ui.App
-import io.github.danielseisenbacher.polywatch.ui.theme.PolywatchTheme
+import io.github.danielseisenbacher.predictable.data.AppViewModel
+import io.github.danielseisenbacher.predictable.ui.App
+import io.github.danielseisenbacher.predictable.ui.theme.PredictableTheme
 
 class MainActivity : ComponentActivity() {
     private val vm: AppViewModel by viewModels()
@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val dynamic by vm.dynamicColor.collectAsStateWithLifecycle()
-            PolywatchTheme(dynamicColor = dynamic) {
+            PredictableTheme(dynamicColor = dynamic) {
                 App(vm)
             }
         }

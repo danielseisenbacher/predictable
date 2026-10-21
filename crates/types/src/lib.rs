@@ -1,4 +1,4 @@
-//! Shared contracts for every polywatch crate.
+//! Shared contracts for every predictable crate.
 //!
 //! - [`addr`]: validated wallet address.
 //! - [`api`]: rows returned by Polymarket Data API v2, Gamma and Polygon RPC, plus the

@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
 import android.os.Build
 import androidx.compose.foundation.layout.Arrangement
@@ -41,9 +41,9 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import io.github.danielseisenbacher.polywatch.BuildConfig
-import io.github.danielseisenbacher.polywatch.data.AppViewModel
-import io.github.danielseisenbacher.polywatch.data.Settings
+import io.github.danielseisenbacher.predictable.BuildConfig
+import io.github.danielseisenbacher.predictable.data.AppViewModel
+import io.github.danielseisenbacher.predictable.data.Settings
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -139,7 +139,7 @@ fun SettingsScreen(vm: AppViewModel, onBack: () -> Unit) {
             }
 
             HorizontalDivider(Modifier.padding(vertical = 20.dp))
-            Text("polywatch ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})", style = MaterialTheme.typography.titleSmall)
+            Text("predictable ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})", style = MaterialTheme.typography.titleSmall)
             Text(
                 "Heuristic leads, not proof of insider trading. Scores flag unusual patterns; most have innocent explanations.",
                 style = MaterialTheme.typography.bodySmall,

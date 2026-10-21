@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -37,11 +37,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import io.github.danielseisenbacher.polywatch.data.AppViewModel
-import io.github.danielseisenbacher.polywatch.data.CoreFile
-import io.github.danielseisenbacher.polywatch.ui.charts.Histogram
-import io.github.danielseisenbacher.polywatch.ui.theme.NumStyle
-import io.github.danielseisenbacher.polywatch.ui.theme.Pw
+import io.github.danielseisenbacher.predictable.data.AppViewModel
+import io.github.danielseisenbacher.predictable.data.CoreFile
+import io.github.danielseisenbacher.predictable.ui.charts.Histogram
+import io.github.danielseisenbacher.predictable.ui.theme.NumStyle
+import io.github.danielseisenbacher.predictable.ui.theme.Pw
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable

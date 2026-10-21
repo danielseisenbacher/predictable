@@ -1,7 +1,7 @@
 // Number/time formatting and label tables, ported from site/js/util.js.
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
-import io.github.danielseisenbacher.polywatch.data.nowS
+import io.github.danielseisenbacher.predictable.data.nowS
 import java.time.Instant
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter

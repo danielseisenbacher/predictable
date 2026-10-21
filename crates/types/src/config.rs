@@ -1,4 +1,4 @@
-//! Every tunable. Defaults are the plan's values; `polywatch.toml` at the repo root
+//! Every tunable. Defaults are the plan's values; `predictable.toml` at the repo root
 //! overrides any subset (all structs are `#[serde(default)]`).
 
 use std::path::Path;
@@ -53,9 +53,9 @@ pub struct RepoConfig {
 impl Default for RepoConfig {
     fn default() -> Self {
         RepoConfig {
-            slug: "danielseisenbacher/poly_position_scraper".into(),
+            slug: "danielseisenbacher/predictable".into(),
             data_branch: "data".into(),
-            dashboard_url: "https://danielseisenbacher.github.io/poly_position_scraper/".into(),
+            dashboard_url: "https://danielseisenbacher.github.io/predictable/".into(),
         }
     }
 }
@@ -88,9 +88,8 @@ impl Default for ApiConfig {
             data_base: "https://data-api.polymarket.com/v2".into(),
             gamma_base: "https://gamma-api.polymarket.com".into(),
             rpc_url: "https://polygon-bor-rpc.publicnode.com".into(),
-            user_agent:
-                "polywatch/0.1 (+https://github.com/danielseisenbacher/poly_position_scraper)"
-                    .into(),
+            user_agent: "predictable/0.1 (+https://github.com/danielseisenbacher/predictable)"
+                .into(),
             data_per_10s: 600,
             trades_per_10s: 200,
             positions_per_10s: 150,
@@ -512,7 +511,7 @@ mod tests {
 
     #[test]
     fn missing_file_is_default() {
-        let c = Config::load(Path::new("/nonexistent/polywatch.toml")).unwrap();
+        let c = Config::load(Path::new("/nonexistent/predictable.toml")).unwrap();
         assert_eq!(c, Config::default());
     }
 }

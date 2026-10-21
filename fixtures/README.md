@@ -1,6 +1,6 @@
 # Fixtures
 
-`live/` holds real responses recorded on 2026-10-21 from the public APIs polywatch uses
+`live/` holds real responses recorded on 2026-10-21 from the public APIs predictable uses
 (Data API v2, Gamma, Polygon RPC via publicnode). Tests decode them and serve them
 through wiremock; nothing in `cargo test` touches the network.
 

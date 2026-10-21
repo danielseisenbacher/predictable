@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
 import android.content.ActivityNotFoundException
 import android.content.ClipData
@@ -48,11 +48,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import io.github.danielseisenbacher.polywatch.data.Settings
-import io.github.danielseisenbacher.polywatch.data.SignalStrength
-import io.github.danielseisenbacher.polywatch.ui.theme.Mono
-import io.github.danielseisenbacher.polywatch.ui.theme.NumStyle
-import io.github.danielseisenbacher.polywatch.ui.theme.Pw
+import io.github.danielseisenbacher.predictable.data.Settings
+import io.github.danielseisenbacher.predictable.data.SignalStrength
+import io.github.danielseisenbacher.predictable.ui.theme.Mono
+import io.github.danielseisenbacher.predictable.ui.theme.NumStyle
+import io.github.danielseisenbacher.predictable.ui.theme.Pw
 
 // ---- links ---------------------------------------------------------------------
 

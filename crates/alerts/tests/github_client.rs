@@ -36,7 +36,7 @@ async fn create_issue_sends_headers_and_payload() {
         .and(header("authorization", "Bearer tok123"))
         .and(header("accept", "application/vnd.github+json"))
         .and(header("x-github-api-version", "2022-11-28"))
-        .and(header("user-agent", "polywatch"))
+        .and(header("user-agent", "predictable"))
         .and(body_json(
             json!({ "title": "t", "body": "b", "labels": ["x", "tier:high"] }),
         ))

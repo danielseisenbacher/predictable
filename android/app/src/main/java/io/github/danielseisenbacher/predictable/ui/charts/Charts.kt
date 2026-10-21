@@ -1,5 +1,5 @@
 // The dashboard's charts (site/js/charts.js), redrawn for touch screens.
-package io.github.danielseisenbacher.polywatch.ui.charts
+package io.github.danielseisenbacher.predictable.ui.charts
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -23,23 +23,23 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import io.github.danielseisenbacher.polywatch.data.Cluster
-import io.github.danielseisenbacher.polywatch.data.CandidateRow
-import io.github.danielseisenbacher.polywatch.data.MarketView
-import io.github.danielseisenbacher.polywatch.data.Position
-import io.github.danielseisenbacher.polywatch.data.TrackedTrade
-import io.github.danielseisenbacher.polywatch.data.Wallet
-import io.github.danielseisenbacher.polywatch.ui.date
-import io.github.danielseisenbacher.polywatch.ui.fixed
-import io.github.danielseisenbacher.polywatch.ui.kindInfo
-import io.github.danielseisenbacher.polywatch.ui.linkInfo
-import io.github.danielseisenbacher.polywatch.ui.num
-import io.github.danielseisenbacher.polywatch.ui.price
-import io.github.danielseisenbacher.polywatch.ui.shortAddr
-import io.github.danielseisenbacher.polywatch.ui.theme.Pw
-import io.github.danielseisenbacher.polywatch.ui.theme.PwColors
-import io.github.danielseisenbacher.polywatch.ui.tierOf
-import io.github.danielseisenbacher.polywatch.ui.usd
+import io.github.danielseisenbacher.predictable.data.Cluster
+import io.github.danielseisenbacher.predictable.data.CandidateRow
+import io.github.danielseisenbacher.predictable.data.MarketView
+import io.github.danielseisenbacher.predictable.data.Position
+import io.github.danielseisenbacher.predictable.data.TrackedTrade
+import io.github.danielseisenbacher.predictable.data.Wallet
+import io.github.danielseisenbacher.predictable.ui.date
+import io.github.danielseisenbacher.predictable.ui.fixed
+import io.github.danielseisenbacher.predictable.ui.kindInfo
+import io.github.danielseisenbacher.predictable.ui.linkInfo
+import io.github.danielseisenbacher.predictable.ui.num
+import io.github.danielseisenbacher.predictable.ui.price
+import io.github.danielseisenbacher.predictable.ui.shortAddr
+import io.github.danielseisenbacher.predictable.ui.theme.Pw
+import io.github.danielseisenbacher.predictable.ui.theme.PwColors
+import io.github.danielseisenbacher.predictable.ui.tierOf
+import io.github.danielseisenbacher.predictable.ui.usd
 import java.time.Instant
 import java.time.ZoneOffset
 import kotlin.math.PI

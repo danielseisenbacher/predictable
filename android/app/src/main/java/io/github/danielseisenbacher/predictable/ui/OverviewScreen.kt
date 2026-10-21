@@ -1,4 +1,4 @@
-package io.github.danielseisenbacher.polywatch.ui
+package io.github.danielseisenbacher.predictable.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
@@ -59,12 +59,12 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import io.github.danielseisenbacher.polywatch.data.AppViewModel
-import io.github.danielseisenbacher.polywatch.data.CandidateRow
-import io.github.danielseisenbacher.polywatch.data.CoreFile
-import io.github.danielseisenbacher.polywatch.data.CoreState
-import io.github.danielseisenbacher.polywatch.data.OverviewFilter
-import io.github.danielseisenbacher.polywatch.ui.theme.Pw
+import io.github.danielseisenbacher.predictable.data.AppViewModel
+import io.github.danielseisenbacher.predictable.data.CandidateRow
+import io.github.danielseisenbacher.predictable.data.CoreFile
+import io.github.danielseisenbacher.predictable.data.CoreState
+import io.github.danielseisenbacher.predictable.data.OverviewFilter
+import io.github.danielseisenbacher.predictable.ui.theme.Pw
 
 /** Sort keys, mirroring the dashboard's candidate table columns. */
 private class SortCol(val key: String, val label: String, val numeric: Boolean, val v: (CandidateRow, Boolean) -> Comparable<*>?)
@@ -128,7 +128,7 @@ fun OverviewScreen(vm: AppViewModel) {
     }
 
     PwScaffold(
-        title = "polywatch",
+        title = "predictable",
         subtitle = core.meta?.let { "tracker ${rel(it.lastTrack, now)} · ${num(it.counts.candidates)} candidates" } ?: if (core.loading) "loading…" else null,
         refreshing = core.loading,
         onRefresh = { vm.refresh() },
@@ -256,7 +256,7 @@ fun OverviewScreen(vm: AppViewModel) {
         title = { Text("Heuristic leads, not proof") },
         text = {
             Text(
-                "polywatch flags Polymarket wallets whose trading looks unusual: new accounts betting big on longshots, " +
+                "predictable flags Polymarket wallets whose trading looks unusual: new accounts betting big on longshots, " +
                     "improbable win rates, leaderboard newcomers, linked accounts and well-timed bets. " +
                     "Scores flag unusual patterns; most have innocent explanations — the signals also catch lucky, skilled or contrarian traders.\n\n" +
                     "Each flagged wallet has a GitHub issue labelled insider-candidate; new findings and big trades are added as comments.",

@@ -1,6 +1,6 @@
 // Shared chart plumbing: a Canvas whose marks register tap targets, and a details
 // card under it that replaces the dashboard's hover tooltips.
-package io.github.danielseisenbacher.polywatch.ui.charts
+package io.github.danielseisenbacher.predictable.ui.charts
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.Canvas
